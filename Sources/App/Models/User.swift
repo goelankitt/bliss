@@ -7,6 +7,8 @@
 
 import FluentPostgreSQL
 import Vapor
+import Authentication
+import Foundation
 
 final class User: Content {
 
@@ -25,3 +27,9 @@ final class User: Content {
 extension User: PostgreSQLUUIDModel {}
 extension User: Migration {}
 extension User: Parameter {}
+extension User: PasswordAuthenticatable {}
+extension User: SessionAuthenticatable {}
+extension User: BasicAuthenticatable {
+    static let usernameKey: UsernameKey = \User.username
+    static let passwordKey: PasswordKey = \User.password
+}
