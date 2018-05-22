@@ -42,3 +42,6 @@ extension Token: Authentication.Token {
     typealias UserType = User // 2
     typealias UserIDType = User.ID //3
 }
+
+extension Token: Content { }
+extension Token: Migration { }
