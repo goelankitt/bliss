@@ -22,6 +22,11 @@ final class User: Content {
         self.email = email
         self.password = password
     }
+
+    struct PublicUser: Content {
+        var username: String
+        var token: String
+    }
 }
 
 extension User: PostgreSQLUUIDModel {}
@@ -33,3 +38,4 @@ extension User: BasicAuthenticatable {
     static let usernameKey: UsernameKey = \User.username
     static let passwordKey: PasswordKey = \User.password
 }
+extension User: TokenAuthenticatable { typealias TokenType = Token }
