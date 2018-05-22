@@ -39,8 +39,8 @@ extension Token: BearerAuthenticatable {
 
 extension Token: Authentication.Token {
     static var userIDKey: WritableKeyPath<Token, User.ID> { return \Token.userId } // 1
-    typealias UserType = User // 2
-    typealias UserIDType = User.ID //3
+    typealias UserType = User
+    typealias UserIDType = User.ID
 }
 
 extension Token: Content { }
