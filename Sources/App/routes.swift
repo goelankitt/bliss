@@ -8,6 +8,10 @@ public func routes(_ router: Router) throws {
     router.get("login", use: userController.login)
     router.delete("logout", use: userController.logout)
 
+    let quoteController = QuoteController()
+    router.post("quote", use: quoteController.create)
+    router.get("quote", use: quoteController.fetch)
+
     let tokenAuthenticationMiddleware = User.tokenAuthMiddleware()
     let authedRoutes = router.grouped(tokenAuthenticationMiddleware)
     authedRoutes.get("this/protected/route") { request -> Future<User.PublicUser> in
