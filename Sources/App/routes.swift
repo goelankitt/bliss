@@ -4,10 +4,9 @@ import Vapor
 public func routes(_ router: Router) throws {
 
     let userController = UserController()
-    router.get("users", use: userController.index)
     router.post("signup", use: userController.signup)
-    router.delete("user", use: userController.delete)
     router.get("login", use: userController.login)
+    router.delete("logout", use: userController.logout)
 
     let tokenAuthenticationMiddleware = User.tokenAuthMiddleware()
     let authedRoutes = router.grouped(tokenAuthenticationMiddleware)

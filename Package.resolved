@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/vapor/core.git",
         "state": {
           "branch": null,
-          "revision": "a909eccc41941faac6fb9e511cdb9a5cb30a05de",
-          "version": "3.1.7"
+          "revision": "3b72f2cc3fb21d505fbe97215418951a8e4a2871",
+          "version": "3.2.1"
         }
       },
       {
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/vapor/http.git",
         "state": {
           "branch": null,
-          "revision": "5e766f72d81ef5fe8805d704efdffd17e4906134",
-          "version": "3.0.6"
+          "revision": "8123ea00e9858b369cd168d0303d33e7d3804d19",
+          "version": "3.0.7"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/vapor/postgresql.git",
         "state": {
           "branch": null,
-          "revision": "4988607c3b2369248c6cfcd34274241a8632cd69",
-          "version": "1.0.0-rc.2.2.1"
+          "revision": "a89177748b28afbd882cf8f892837b626f9f46b2",
+          "version": "1.0.0-rc.2.2.3"
         }
       },
       {
@@ -123,8 +123,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "a5db2a67515ad2b490ac5646db204a5edf939f47",
-          "version": "1.6.1"
+          "revision": "77dc77b9b5cdddfb3c385c5ee6cb74153d284967",
+          "version": "1.7.2"
         }
       },
       {
@@ -132,8 +132,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-ssl.git",
         "state": {
           "branch": null,
-          "revision": "38955a5f806a952daf2b16fbfe9aa529749cf1dd",
-          "version": "1.1.0"
+          "revision": "0adc938bc8de3d3829b842f9767d81c7480b8403",
+          "version": "1.1.1"
         }
       },
       {
@@ -186,8 +186,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "8c73eebf7c41c7d8bf83ff87f550e0f97d6aadc4",
-          "version": "3.0.2"
+          "revision": "39b4d3fa36e58c6f7415c9da6c65a703bec34cea",
+          "version": "3.0.3"
         }
       },
       {

@@ -17,22 +17,16 @@ final class UserController {
         }
     }
 
-    /// Returns a list of all Users.
-    func index(_ req: Request) throws -> Future<[User]> {
-        return User.query(on: req).all()
-    }
-
-    /// Deletes a parameterized User.
-    func delete(_ req: Request) throws -> Future<HTTPStatus> {
-        return try req.parameters.next(User.self).flatMap { user in
-            return user.delete(on: req)
-        }.transform(to: .ok)
-    }
-
     func login(_ request: Request) throws -> Future<User> {
         return try request.content.decode(User.self).flatMap(to: User.self) { user in
             let passwordVerifier = try request.make(BCryptDigest.self)
             return User.authenticate(username: user.username, password: user.password, using: passwordVerifier, on: request).unwrap(or: Abort.init(HTTPResponseStatus.unauthorized))
         }
+    }
+
+    func logout(_ request: Request) -> Response {
+        // Delete the token and redirect to home page
+        try! request.unauthenticateSession(User.self)
+        return request.redirect(to: "/")
     }
 }
